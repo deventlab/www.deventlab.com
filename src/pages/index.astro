@@ -1,0 +1,111 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="deventlab — distributed systems, simply"
+  description="Open-source building blocks for distributed applications: embedded in your app, not another cluster to run."
+>
+  <main>
+    <section class="hero wrap">
+      <div class="hero-text">
+        <h1>Distributed systems, simply.</h1>
+        <p class="sub">
+          Open-source building blocks for distributed applications: embedded in your app, not another cluster to run.
+        </p>
+        <div class="cta">
+          <a class="btn" href="https://d-engine.deventlab.com">Explore d-engine</a>
+          <a class="link" href="#work">Work with us</a>
+        </div>
+      </div>
+      <svg class="mesh" viewBox="0 0 220 160" role="img" aria-label="Three connected nodes, one of them highlighted">
+        <g stroke="#1B2A4A" stroke-width="2" opacity="0.35">
+          <line x1="40" y1="110" x2="110" y2="30" />
+          <line x1="110" y1="30" x2="180" y2="110" />
+          <line x1="40" y1="110" x2="180" y2="110" />
+        </g>
+        <circle cx="40" cy="110" r="16" fill="#1B2A4A" />
+        <circle cx="110" cy="30" r="16" fill="#1B2A4A" />
+        <circle cx="180" cy="110" r="16" fill="#D23C34" />
+      </svg>
+    </section>
+
+    <section class="wrap" id="products">
+      <h2>Products</h2>
+      <div class="products">
+        <div class="card big">
+          <span class="tag">Open source</span>
+          <h3>d-engine</h3>
+          <p>Embeddable Raft engine for Rust. Leader election and replicated state inside your own process.</p>
+          <p class="links">
+            <a href="https://d-engine.deventlab.com">Website</a>
+            <a href="https://github.com/deventlab/d-engine">GitHub</a>
+          </p>
+        </div>
+        <div class="card">
+          <span class="tag">Experimental</span>
+          <h3>d-lmdb</h3>
+          <p>A distributed LMDB built on d-engine.</p>
+          <p class="links">
+            <a href="https://blog.deventlab.com/blog/2026-07-26-distributed-lmdb-built-on-d-engine/">Read the post</a>
+            <a href="https://github.com/deventlab/d-lmdb">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="principles">
+        <div><h3>Embedded</h3><p>Runs inside your app. No extra service to deploy.</p></div>
+        <div><h3>Lightweight</h3><p>One binary. Small surface, few moving parts.</p></div>
+        <div><h3>Yours to run</h3><p>Open source. Your data, your infrastructure.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="work">
+      <h2>Work with us</h2>
+      <p class="lead">
+        We're looking for a few teams to build with. If you run distributed services and want consensus, coordination or replication built into your app, we can help.
+      </p>
+      <div class="products">
+        <div class="card">
+          <h3>Design partners</h3>
+          <p>Shape the roadmap with direct access to the maintainer.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting &amp; custom work</h3>
+          <p>Architecture review, integration, custom features.</p>
+        </div>
+      </div>
+      <p class="mail"><a href="mailto:contact@deventlab.com">contact@deventlab.com</a></p>
+    </section>
+  </main>
+</Base>
+
+<style>
+  section { padding-top: 72px; }
+  .hero { padding-top: 88px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .hero-text { flex: 1 1 480px; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.08; margin: 0 0 20px; color: var(--dl-primary); letter-spacing: -0.02em; }
+  h2 { font-size: 1.7rem; margin: 0 0 24px; color: var(--dl-primary); letter-spacing: -0.01em; }
+  h3 { margin: 0 0 8px; font-size: 1.15rem; }
+  .sub, .lead { color: var(--dl-muted); max-width: 640px; font-size: 1.15rem; margin: 0 0 8px; }
+  .cta { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-top: 28px; }
+  .btn { background: var(--dl-accent); color: #fff; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 600; }
+  .btn:hover { filter: brightness(0.92); }
+  .link { font-weight: 600; text-decoration: none; }
+  .mesh { width: 220px; flex: 0 0 auto; }
+
+  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .card { background: var(--dl-white); border: 1px solid var(--dl-border); border-radius: 14px; padding: 24px; }
+  .card.big { border-color: var(--dl-primary); padding: 32px; }
+  .card p { margin: 0 0 12px; color: var(--dl-muted); }
+  .tag { display: inline-block; margin-bottom: 10px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dl-muted); }
+  .links { display: flex; gap: 18px; margin: 16px 0 0 !important; }
+  .links a { font-weight: 600; }
+
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+  .principles p { margin: 0; color: var(--dl-muted); }
+  .mail { margin-top: 24px; font-size: 1.1rem; }
+  .mail a { font-weight: 600; }
+</style>
