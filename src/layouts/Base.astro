@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
   <body>
     <header class="nav">
       <div class="wrap nav-inner">
-        <a class="product" href="/"><span class="logo">D<i></i></span>deventlab</a>
+        <a class="product" href="/"><img class="logo" src="/logo.svg" width="32" height="32" alt="" />deventlab</a>
         <nav>
           <a href="#products">Products</a>
           <a href="https://blog.deventlab.com">Blog</a>
@@ -48,7 +48,7 @@ const { title, description } = Astro.props;
           </div>
           <div>
             <h4>Contact</h4>
-            <a href="mailto:contact@deventlab.com">contact@deventlab.com</a>
+            <span>Work with us: custom work and consulting<br /><a href="mailto:contact@deventlab.com">contact@deventlab.com</a></span>
           </div>
         </div>
         <p class="copy">© deventlab · distributed systems, simply</p>
@@ -79,13 +79,14 @@ const { title, description } = Astro.props;
   .nav nav a:hover { color: var(--dl-primary); }
   .nav nav a.gh { display: flex; color: var(--dl-ink); }
   .product { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.15rem; color: var(--dl-ink); text-decoration: none; }
-  .logo { position: relative; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--dl-primary); color: #fff; font-weight: 700; font-size: 1rem; }
-  .logo i { position: absolute; top: -4px; right: -4px; width: 11px; height: 11px; border-radius: 50%; background: var(--dl-accent); border: 2px solid var(--dl-white); }
+  .logo { display: block; }
 
   .footer { margin-top: 96px; padding: 40px 0 28px; font-size: 0.92rem; border-top: 1px solid var(--dl-border); background: var(--dl-white); }
   .footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
   .footer h4 { margin: 0 0 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--dl-muted); }
-  .footer .cols a { display: block; margin-bottom: 8px; color: var(--dl-ink); text-decoration: none; }
+  .footer .cols a, .footer .cols span { display: block; margin-bottom: 8px; color: var(--dl-ink); text-decoration: none; }
+  .footer .cols span { color: var(--dl-muted); }
+  .footer .cols span a { display: inline; color: var(--dl-primary); }
   .footer .cols a:hover { color: var(--dl-primary); }
   .footer .copy { margin: 32px 0 0; padding-top: 20px; border-top: 1px solid var(--dl-border); color: var(--dl-muted); font-size: 0.85rem; }
 </style>
